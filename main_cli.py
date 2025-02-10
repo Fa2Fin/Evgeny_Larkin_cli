@@ -37,5 +37,10 @@ def main():
             else:
                 print("Ошибка: Неверное количество аргументов.")
 
+        elif cmd == 'rm':
+            if len(command) > 1:
+                func.remove_file(command[1])
+            else:
+                print("Ошибка: Не указан путь для удаления.")
 if __name__ == "__main__":
     main()

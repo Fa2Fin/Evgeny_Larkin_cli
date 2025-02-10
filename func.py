@@ -49,3 +49,16 @@ def move_file(src, dst):
         print("Ошибка: Исходный файл не найден.")
     except Exception as e:
         print(f"Ошибка: {e}")
+
+def remove_file(path):
+    try:
+        if os.path.isdir(path):
+            shutil.rmtree(path)
+            print(f"Удален каталог: {path}")
+        else:
+            os.remove(path)
+            print(f"Удален файл: {path}")
+    except FileNotFoundError:
+        print("Ошибка: Указанный файл или каталог не найден.")
+    except Exception as e:
+        print(f"Ошибка: {e}")
