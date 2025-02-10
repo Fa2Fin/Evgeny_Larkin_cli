@@ -19,6 +19,12 @@ def main():
         elif cmd == 'ls':
             func.list_directory()
 
+        elif cmd == 'cd':
+            if len(command) > 1:
+                func.change_directory(command[1])
+            else:
+                print("Ошибка: Не указан путь для перехода.")
+
 
 if __name__ == "__main__":
     main()
