@@ -42,5 +42,13 @@ def main():
                 func.remove_file(command[1])
             else:
                 print("Ошибка: Не указан путь для удаления.")
+
+        elif cmd == 'exit':
+            print("Выход из программы.")
+            break
+        else:
+            print("Ошибка: Неизвестная команда.")
+
+
 if __name__ == "__main__":
     main()
