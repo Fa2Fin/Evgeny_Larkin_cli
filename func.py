@@ -30,3 +30,13 @@ def change_directory(path):
         print("Ошибка: Указанный путь не найден.")
     except NotADirectoryError:
         print("Ошибка: Указанный путь не является каталогом.")
+
+
+def copy_file(src, dst):
+    try:
+        shutil.copy(src, dst)
+        print(f"Скопирован: {src} -> {dst}")
+    except FileNotFoundError:
+        print("Ошибка: Исходный файл не найден.")
+    except Exception as e:
+        print(f"Ошибка: {e}")

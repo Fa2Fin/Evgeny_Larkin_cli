@@ -25,6 +25,12 @@ def main():
             else:
                 print("Ошибка: Не указан путь для перехода.")
 
+        elif cmd == 'cp':
+            if len(command) == 3:
+                func.copy_file(command[1], command[2])
+            else:
+                print("Ошибка: Неверное количество аргументов.")
+
 
 if __name__ == "__main__":
     main()
