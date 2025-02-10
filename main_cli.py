@@ -16,6 +16,9 @@ def main():
         if cmd == 'help':
             func.print_help()
 
+        elif cmd == 'ls':
+            func.list_directory()
+
 
 if __name__ == "__main__":
     main()

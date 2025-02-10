@@ -14,3 +14,9 @@ def print_help():
     - exit             : Выйти из программы.
     """
     print(help_text)
+
+
+def list_directory():
+    print("Содержимое текущего каталога:")
+    for item in os.listdir():
+        print(f" - {item}")
