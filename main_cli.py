@@ -31,6 +31,11 @@ def main():
             else:
                 print("Ошибка: Неверное количество аргументов.")
 
+        elif cmd == 'mv':
+            if len(command) == 3:
+                func.move_file(command[1], command[2])
+            else:
+                print("Ошибка: Неверное количество аргументов.")
 
 if __name__ == "__main__":
     main()

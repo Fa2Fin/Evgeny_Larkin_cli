@@ -40,3 +40,12 @@ def copy_file(src, dst):
         print("Ошибка: Исходный файл не найден.")
     except Exception as e:
         print(f"Ошибка: {e}")
+
+def move_file(src, dst):
+    try:
+        shutil.move(src, dst)
+        print(f"Перемещен: {src} -> {dst}")
+    except FileNotFoundError:
+        print("Ошибка: Исходный файл не найден.")
+    except Exception as e:
+        print(f"Ошибка: {e}")
